@@ -1,0 +1,38 @@
+name: CI - Build and SonarQube analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  
+jobs:
+  build-and-analyze:
+    name: Build and SonarQube analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+        with: 
+          fetch-depth: '0'
+      
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v3
+        with: 
+          dotnet-version: '8.0.x'
+      
+      - name: Restore dependencies
+        run: dotnet restore
+        
+      - name: Build application
+        run: dotnet build --no-restore --configuration Release
+        
+      - name: SonarQube analysis
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env: 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with: 
+          args: >
+            -Dsonar.projectKey=MateusOK_LinkitoApi
+            -Dsonar.organization=mateusok

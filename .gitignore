@@ -1,0 +1,10 @@
+#Ignore IDE files
+.idea/
+
+#Ignore binary and temp files
+**/bin/
+**/obj/
+
+#Ignore local settings
+**/appsettings.*.json
+!**/appsettings.json

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkito.Api", "Linkito.Api\Linkito.Api.csproj", "{5DA0D08B-8035-4182-804F-85D2290DFB02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkito.Application", "Linkito.Application\Linkito.Application.csproj", "{64153A93-E259-45CF-9C78-274A2FECFC33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkito.Domain", "Linkito.Domain\Linkito.Domain.csproj", "{ACA3FEA3-F80E-410A-AB6E-DFE90B64A4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkito.Infrastructure", "Linkito.Infrastructure\Linkito.Infrastructure.csproj", "{9A3CB92D-1F3A-4DCC-97C5-4DEF413AD659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkito.Tests", "Linkito.Tests\Linkito.Tests.csproj", "{B726B20F-1694-4266-9FAE-A12000E1E747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DA0D08B-8035-4182-804F-85D2290DFB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA0D08B-8035-4182-804F-85D2290DFB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA0D08B-8035-4182-804F-85D2290DFB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA0D08B-8035-4182-804F-85D2290DFB02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64153A93-E259-45CF-9C78-274A2FECFC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64153A93-E259-45CF-9C78-274A2FECFC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64153A93-E259-45CF-9C78-274A2FECFC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64153A93-E259-45CF-9C78-274A2FECFC33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA3FEA3-F80E-410A-AB6E-DFE90B64A4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA3FEA3-F80E-410A-AB6E-DFE90B64A4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA3FEA3-F80E-410A-AB6E-DFE90B64A4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA3FEA3-F80E-410A-AB6E-DFE90B64A4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A3CB92D-1F3A-4DCC-97C5-4DEF413AD659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3CB92D-1F3A-4DCC-97C5-4DEF413AD659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3CB92D-1F3A-4DCC-97C5-4DEF413AD659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3CB92D-1F3A-4DCC-97C5-4DEF413AD659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B726B20F-1694-4266-9FAE-A12000E1E747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B726B20F-1694-4266-9FAE-A12000E1E747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B726B20F-1694-4266-9FAE-A12000E1E747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B726B20F-1694-4266-9FAE-A12000E1E747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
