@@ -1,6 +1,8 @@
+using Linkito.Application.Dtos.Response;
+
 namespace Linkito.Application.Services.Interfaces;
 
 public interface IShortUrlService
 {
-    Task CreateShortUrl(string originalUrl, DateTime? expirationDate);
+    Task<ShortUrlResponse> CreateShortUrlAsync(string originalUrl, DateTime? expirationDate);
 }
