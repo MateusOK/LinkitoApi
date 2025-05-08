@@ -1,6 +1,8 @@
+using Linkito.Application.Dtos.Response;
 using Linkito.Application.Services.Interfaces;
 using Linkito.Domain.Entities;
 using Linkito.Domain.Repositories;
+using Microsoft.Extensions.Configuration;
 
 namespace Linkito.Application.Services;
 
@@ -8,14 +10,16 @@ public class ShortUrlService : IShortUrlService
 {
 
     private readonly IGenericRepository<ShortUrl> _shortUrlRepository;
+    private readonly IConfiguration _configuration;
 
-    public ShortUrlService(IGenericRepository<ShortUrl> shortUrlRepository)
+    public ShortUrlService(IGenericRepository<ShortUrl> shortUrlRepository, IConfiguration configuration)
     {
         _shortUrlRepository = shortUrlRepository;
+        _configuration = configuration;
     }
 
 
-    public async Task CreateShortUrl(string originalUrl, DateTime? expirationDate)
+    public async Task<ShortUrlResponse> CreateShortUrlAsync(string originalUrl, DateTime? expirationDate)
     {
         var shortCode = GenerateShortCode();
 
@@ -34,6 +38,9 @@ public class ShortUrlService : IShortUrlService
         };
 
         await _shortUrlRepository.AddAsync(shortUrl);
+        
+        var baseUrl = _configuration["AppSettings:BaseUrl"];
+        return new ShortUrlResponse { ShortUrl = $"{baseUrl}{shortCode}" };
 
     }
 

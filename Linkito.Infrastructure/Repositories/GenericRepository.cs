@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Linkito.Domain.Common;
 using Linkito.Domain.Repositories;
 using Linkito.Infrastructure.Database;
@@ -26,6 +27,11 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     public async Task<IEnumerable<T>> GetAllAsync()
     {
         return await _dbSet.ToListAsync();
+    }
+
+    public async Task<T?> GetFirstOrDefaultAsync(Expression<Func<T, bool>> predicate)
+    {
+        return await _dbSet.FirstOrDefaultAsync(predicate);
     }
 
     public async Task AddAsync(T entity)
